@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LK Custom AI</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#111;color:white}
+header{padding:25px;text-align:center;border-bottom:1px solid #333}
+.logo{font-size:28px;font-weight:bold;color:#39ff88}
+.hero{text-align:center;padding:70px 20px}
+h1{font-size:48px;margin:10px 0}
+p{color:#bbb;font-size:18px}
+.box{max-width:650px;margin:30px auto;padding:25px;background:#1b1b1b;border-radius:20px}
+textarea{width:100%;height:120px;padding:15px;border-radius:12px;border:0;font-size:16px;resize:none}
+button{width:100%;margin-top:15px;padding:15px;border:0;border-radius:12px;background:#39ff88;color:#111;font-size:18px;font-weight:bold}
+#resultado{margin-top:20px;padding:20px;background:#292929;border-radius:12px;display:none}
+.features{display:flex;flex-wrap:wrap;gap:15px;max-width:900px;margin:30px auto;padding:20px}
+.card{flex:1;min-width:220px;background:#1b1b1b;padding:25px;border-radius:15px}
+.card h2{color:#39ff88}
+footer{text-align:center;padding:40px;color:#777}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">LK CUSTOM AI</div>
+<p>Sua ideia, nossa tecnologia, seu estilo.</p>
+</header>
+
+<section class="hero">
+<h1>Crie. Personalize. Venda.</h1>
+<p>Use inteligência artificial para criar ideias incríveis para sua marca de roupas.</p>
+
+<div class="box">
+<textarea id="ideia" placeholder="Descreva sua roupa... Ex: camiseta preta com desenho futurista verde"></textarea>
+<button onclick="gerar()">Gerar ideia ✨</button>
+<div id="resultado"></div>
+</div>
+</section>
+
+<section class="features">
+<div class="card">
+<h2>🤖 IA</h2>
+<p>Crie ideias de estampas e designs para suas roupas.</p>
+</div>
+
+<div class="card">
+<h2>👕 Personalização</h2>
+<p>Imagine novas peças e estilos para sua marca.</p>
+</div>
+
+<div class="card">
+<h2>📱 Marketing</h2>
+<p>Crie conteúdos para divulgar seus produtos.</p>
+</div>
+</section>
+
+<footer>
+LK Custom AI © 2026
+</footer>
+
+<script>
+function gerar(){
+let ideia=document.getElementById("ideia").value;
+let resultado=document.getElementById("resultado");
+
+if(!ideia){
+resultado.style.display="block";
+resultado.innerHTML="Digite uma ideia primeiro 😊";
+return;
+}
+
+resultado.style.display="block";
+resultado.innerHTML="<b>💡 Sua ideia:</b><br><br>"+
+ideia+
+"<br><br>✨ Sugestão: transforme essa ideia em uma peça moderna, com identidade visual forte e detalhes exclusivos.";
+}
+</script>
+
+</body>
+</html>
